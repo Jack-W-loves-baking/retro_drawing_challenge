@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ReactCardFlip from "react-card-flip";
-import { Back } from "./back";
+import { Back } from "./Back";
 import { Front } from "./Front";
 import { makeStyles } from "@mui/styles";
 
