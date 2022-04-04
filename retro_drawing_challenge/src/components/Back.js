@@ -8,7 +8,7 @@ export const Back = ({ word, onClick }) => {
     <div onClick={onClick}>
       <Card sx={{ minWidth: 275 }}>
         <CardContent>
-          <Typography align="center" variant="h3" component="div">
+          <Typography color="teal" align="center" variant="h3" component="div">
             {word}
           </Typography>
         </CardContent>
