@@ -3,9 +3,9 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 
-export const Back = ({ word, onClick }) => {
+export const Back = ({ word }) => {
   return (
-    <div onClick={onClick}>
+    <div>
       <Card sx={{ minWidth: 275 }}>
         <CardContent>
           <Typography color="teal" align="center" variant="h3" component="div">

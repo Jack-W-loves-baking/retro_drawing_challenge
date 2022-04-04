@@ -3,7 +3,7 @@ import { CardItem } from "./CardItem";
 import { cardData } from "../constants";
 import { makeStyles } from "@mui/styles";
 import { Button } from "@mui/material";
-
+import { StopWatch } from "./StopWatch";
 export const DrawingGame = () => {
   const [diffLevel, setDiffLevel] = useState(1);
   const classes = useStyles();
@@ -37,9 +37,14 @@ export const DrawingGame = () => {
             );
           })}
       </div>
-      <p>Current difficulty level: {diffLevel} </p>
-      <Button onClick={handleIncrease}>Increase Difficulty</Button>
-      <Button onClick={handleDecrease}>Decrease Difficulty</Button>
+      <div className={classes.configs}>
+        {/* <StopWatch /> */}
+        <div className={classes.center}>
+          <p>Current difficulty level: {diffLevel} </p>
+          <Button onClick={handleIncrease}>Increase Difficulty</Button>
+          <Button onClick={handleDecrease}>Decrease Difficulty</Button>
+        </div>
+      </div>
     </div>
   );
 };
@@ -60,5 +65,14 @@ const useStyles = makeStyles({
     flexWrap: "wrap",
     padding: 30,
     maxWidth: "70%",
+  },
+  configs: {
+    flexDirection: "row",
+  },
+  center: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    flexDirection: "column",
   },
 });
